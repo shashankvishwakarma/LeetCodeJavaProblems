@@ -1,4 +1,4 @@
-package com.example.hackerrank;
+package hackerrank.problemsolving.practice;
 
 import java.io.IOException;
 import java.util.Arrays;
