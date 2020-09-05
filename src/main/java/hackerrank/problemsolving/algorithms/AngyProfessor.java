@@ -1,5 +1,6 @@
 package hackerrank.problemsolving.algorithms;
 
+import java.io.IOException;
 import java.util.Scanner;
 
 public class AngyProfessor {
