@@ -26,7 +26,7 @@ package leetcode;
  * Example 1:
  * <p>
  * Input: startPosition = "5h", R = 10, C = 15
- * Output: "7a"
+ * Output: "7g"
  */
 public class ChessPawnPosition {
 
