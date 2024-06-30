@@ -11,11 +11,11 @@
 	</parent>
 
 	<groupId>com.example</groupId>
-	<artifactId>hackerrank</artifactId>
+	<artifactId>LeetCodeJavaProblems</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>jar</packaging>
-	<name>hackerrank</name>
-	<description>hackerrank</description>
+	<name>LeetCodeJavaProblems</name>
+	<description>Leet Code Java Problems</description>
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
