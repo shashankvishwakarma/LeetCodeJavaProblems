@@ -1,4 +1,4 @@
-package cfg;
+package geeksforgeeks;
 
 public class CeilingOfNumber {
     public static void main(String[] args) {
