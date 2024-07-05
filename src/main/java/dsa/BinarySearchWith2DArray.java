@@ -2,6 +2,9 @@ package dsa;
 
 import java.util.Arrays;
 
+/**
+ * Matrix is sorted in row and column wise manner.
+ */
 public class BinarySearchWith2DArray {
     public static void main(String[] args) {
         int[][] arr = {
