@@ -5,7 +5,7 @@ import java.util.Arrays;
 /**
  * Matrix is sorted in row and column wise manner.
  */
-public class BinarySearchWith2DArray {
+public class BinarySearchRowColumnSortedMatrix {
     public static void main(String[] args) {
         int[][] arr = {
                 {10, 20, 30, 40},
