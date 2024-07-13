@@ -1,27 +1,25 @@
-package leetcode.medium;
+package leetcode.easy;
 
-import java.util.ArrayList;
-import java.util.List;
+import java.util.Arrays;
 
 /**
- * https://leetcode.com/problems/find-all-duplicates-in-an-array/
+ * https://leetcode.com/problems/set-mismatch/description/
  */
-public class FindAllDuplicatesInAnArray {
+public class SetMismatch {
     public static void main(String[] args) {
-        int[] arr = {4, 3, 2, 7, 8, 2, 3, 1};
-        System.out.println(findDuplicates(arr));
+        int[] arr = {1, 2, 2, 4};
+        System.out.println(Arrays.toString(findErrorNums(arr)));
     }
 
-    public static List<Integer> findDuplicates(int[] nums) {
+    public static int[] findErrorNums(int[] nums) {
         cyclicSort(nums);
-        List<Integer> ans = new ArrayList<>();
 
         for (int index = 0; index < nums.length; index++) {
             if (nums[index] != index + 1) {
-                ans.add(nums[index]);
+                return new int[]{nums[index], index + 1};
             }
         }
-        return ans;
+        return new int[]{-1, -1};
     }
 
     public static void cyclicSort(int[] nums) {
@@ -36,6 +34,6 @@ public class FindAllDuplicatesInAnArray {
                 i++;
             }
         }
-    }
 
+    }
 }
