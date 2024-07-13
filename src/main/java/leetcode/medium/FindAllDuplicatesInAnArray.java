@@ -1,23 +1,27 @@
 package leetcode.medium;
 
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  * https://leetcode.com/problems/find-the-duplicate-number/description/
  */
-public class FindTheDuplicateNumber {
+public class FindAllDuplicatesInAnArray {
     public static void main(String[] args) {
-        int[] arr = {1, 3, 4, 2, 2};
-        System.out.println(findDuplicate(arr));
+        int[] arr = {4, 3, 2, 7, 8, 2, 3, 1};
+        System.out.println(findDuplicates(arr));
     }
 
-    public static int findDuplicate(int[] nums) {
+    public static List<Integer> findDuplicates(int[] nums) {
         cyclicSort(nums);
+        List<Integer> ans = new ArrayList<>();
 
         for (int index = 0; index < nums.length; index++) {
             if (nums[index] != index + 1) {
-                return nums[index];
+                ans.add(nums[index]);
             }
         }
-        return -1;
+        return ans;
     }
 
     public static void cyclicSort(int[] nums) {
@@ -33,4 +37,5 @@ public class FindTheDuplicateNumber {
             }
         }
     }
+
 }
