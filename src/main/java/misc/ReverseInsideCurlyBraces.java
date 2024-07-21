@@ -1,4 +1,4 @@
-package leetcode;
+package misc;
 
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;

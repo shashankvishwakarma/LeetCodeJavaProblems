@@ -1,4 +1,4 @@
-package leetcode;
+package leetcode.easy;
 
 /**
  * https://leetcode.com/problems/longest-common-prefix/
