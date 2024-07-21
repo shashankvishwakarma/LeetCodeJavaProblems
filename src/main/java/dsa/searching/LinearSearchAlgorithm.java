@@ -1,4 +1,4 @@
-package dsa;
+package dsa.searching;
 
 public class LinearSearchAlgorithm {
 
