@@ -22,7 +22,7 @@ public class LetterCombinationsOfPhoneNumber {
         System.out.println("Letter combinations for " + digits3 + ": " + result3);
     }
 
-    public static List<String> letterCombinations(String digits) {
+    public static List<String> letterCombinationsOptimized(String digits) {
         List<String> result = new ArrayList<>();
         if (digits == null || digits.isEmpty()) {
             return result;
@@ -51,5 +51,32 @@ public class LetterCombinationsOfPhoneNumber {
             backtrack(digits, index + 1, sb, result);
             sb.deleteCharAt(sb.length() - 1);
         }
+    }
+
+    //--------------------- solution 1 -------------------
+    public static List<String> letterCombinations(String digits) {
+        if (digits.isEmpty()) {
+            return new ArrayList<>();
+        }
+        return padRet("", digits);
+    }
+
+    static List<String> padRet(String p, String up) {
+        if (up.isEmpty()) {
+            ArrayList<String> list = new ArrayList<>();
+            list.add(p);
+            return list;
+        }
+        int digit = up.charAt(0) - '0'; // this will convert '2' into 2
+
+        ArrayList<String> list = new ArrayList<>();
+        int start = (digit - 2) * 3 + (digit >= 8 ? 1 : 0); // Adjust for '7' and '9' which have 4 letters
+        int end = start + 3 + (digit == 7 || digit == 9 ? 1 : 0); // Adjust for '7' and '9' which have 4 letters
+
+        for (int i = start; i < end; i++) {
+            char ch = (char) ('a' + i);
+            list.addAll(padRet(p + ch, up.substring(1)));
+        }
+        return list;
     }
 }
