@@ -24,7 +24,7 @@ public class SinglyLinkedList {
         }
     }
 
-    public void addFirst(String value) {
+    public void insertFirst(String value) {
         Node node = new Node(value);
         node.next = head;
         head = node;
@@ -35,10 +35,10 @@ public class SinglyLinkedList {
         size++;
     }
 
-    public void addLast(String value) {
+    public void insertLast(String value) {
         Node node = new Node(value);
         if (head == null) {
-            addFirst(value);
+            insertFirst(value);
             return;
         }
         tail.next = node;
@@ -48,12 +48,12 @@ public class SinglyLinkedList {
 
     public void insertAt(String value, int index) {
         if (index == 0) {
-            addFirst(value);
+            insertFirst(value);
             return;
         }
 
         if (index == size) {
-            addLast(value);
+            insertLast(value);
             return;
         }
 
@@ -107,12 +107,12 @@ public class SinglyLinkedList {
 class SinglyLinkedListClient {
     public static void main(String[] args) {
         SinglyLinkedList singlyLinkedList = new SinglyLinkedList();
-        singlyLinkedList.addFirst("1");
-        singlyLinkedList.addFirst("2");
-        singlyLinkedList.addFirst("3");
-        singlyLinkedList.addFirst("4");
-        singlyLinkedList.addLast("7");
-        singlyLinkedList.addLast("8");
+        singlyLinkedList.insertFirst("1");
+        singlyLinkedList.insertFirst("2");
+        singlyLinkedList.insertFirst("3");
+        singlyLinkedList.insertFirst("4");
+        singlyLinkedList.insertLast("7");
+        singlyLinkedList.insertLast("8");
         singlyLinkedList.insertAt("6", 3);
         System.out.println(singlyLinkedList.deleteFirst());
         System.out.println(singlyLinkedList.deleteLast());
