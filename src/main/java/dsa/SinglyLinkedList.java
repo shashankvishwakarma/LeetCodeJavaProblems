@@ -93,6 +93,25 @@ public class SinglyLinkedList {
         return value;
     }
 
+    public Node find(String value) {
+        Node node = head;
+        while (node != null) {
+            if (node.value == value) {
+                return node;
+            }
+            node = node.next;
+        }
+        return null;
+    }
+
+    public Node get(int index) {
+        Node node = head;
+        for (int i = 0; i < index; i++) {
+            node = node.next;
+        }
+        return node;
+    }
+
     public void display() {
         Node node = head;
         do {
@@ -116,7 +135,8 @@ class SinglyLinkedListClient {
         singlyLinkedList.insertAt("6", 3);
         System.out.println(singlyLinkedList.deleteFirst());
         System.out.println(singlyLinkedList.deleteLast());
-
+        System.out.println(singlyLinkedList.find("3"));
+        System.out.println(singlyLinkedList.get(3));
         singlyLinkedList.display();
     }
 }
