@@ -7,20 +7,20 @@ public class SinglyLinkedList {
     public static int size = 0;
 
     public class Node {
-        public String value;
+        public int value;
         public Node next;
 
-        public Node(String value) {
+        public Node(int value) {
             this.value = value;
         }
 
-        public Node(String value, Node next) {
+        public Node(int value, Node next) {
             this.value = value;
             this.next = next;
         }
     }
 
-    public void insertFirst(String value) {
+    public void insertFirst(int value) {
         Node node = new Node(value);
         node.next = head;
         head = node;
@@ -31,7 +31,7 @@ public class SinglyLinkedList {
         size++;
     }
 
-    public void insertLast(String value) {
+    public void insertLast(int value) {
         Node node = new Node(value);
         if (head == null) {
             insertFirst(value);
@@ -42,7 +42,7 @@ public class SinglyLinkedList {
         size++;
     }
 
-    public void insertAt(String value, int index) {
+    public void insertAt(int value, int index) {
         if (index == 0) {
             insertFirst(value);
             return;
@@ -64,8 +64,8 @@ public class SinglyLinkedList {
         size++;
     }
 
-    public String deleteFirst() {
-        String value = head.value;
+    public int deleteFirst() {
+        int value = head.value;
         head = head.next;
         if (head == null) {
             tail = null;
@@ -74,11 +74,11 @@ public class SinglyLinkedList {
         return value;
     }
 
-    public String deleteLast() {
+    public int deleteLast() {
         if (size <= 1) {
             return deleteFirst();
         }
-        String value = tail.value;
+        int value = tail.value;
         Node temp = head;
         for (int i = 0; i < size - 2; i++) {
             temp = temp.next;
@@ -89,7 +89,7 @@ public class SinglyLinkedList {
         return value;
     }
 
-    public Node find(String value) {
+    public Node find(int value) {
         Node node = head;
         while (node != null) {
             if (node.value == value) {
@@ -122,16 +122,16 @@ public class SinglyLinkedList {
 class SinglyLinkedListClient {
     public static void main(String[] args) {
         SinglyLinkedList singlyLinkedList = new SinglyLinkedList();
-        singlyLinkedList.insertFirst("1");
-        singlyLinkedList.insertFirst("2");
-        singlyLinkedList.insertFirst("3");
-        singlyLinkedList.insertFirst("4");
-        singlyLinkedList.insertLast("7");
-        singlyLinkedList.insertLast("8");
-        singlyLinkedList.insertAt("6", 3);
+        singlyLinkedList.insertFirst(1);
+        singlyLinkedList.insertFirst(2);
+        singlyLinkedList.insertFirst(3);
+        singlyLinkedList.insertFirst(4);
+        singlyLinkedList.insertLast(7);
+        singlyLinkedList.insertLast(8);
+        singlyLinkedList.insertAt(6, 3);
         System.out.println(singlyLinkedList.deleteFirst());
         System.out.println(singlyLinkedList.deleteLast());
-        System.out.println(singlyLinkedList.find("3"));
+        System.out.println(singlyLinkedList.find(3));
         System.out.println(singlyLinkedList.get(3));
         singlyLinkedList.display();
     }
