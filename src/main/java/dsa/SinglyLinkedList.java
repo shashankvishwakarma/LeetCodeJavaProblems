@@ -2,17 +2,13 @@ package dsa;
 
 public class SinglyLinkedList {
 
-    private Node head;
-    private Node tail;
-    private int size;
+    public Node head;
+    public Node tail;
+    public static int size = 0;
 
-    public SinglyLinkedList() {
-        this.size = 0;
-    }
-
-    private class Node {
-        private String value;
-        private Node next;
+    public class Node {
+        public String value;
+        public Node next;
 
         public Node(String value) {
             this.value = value;
