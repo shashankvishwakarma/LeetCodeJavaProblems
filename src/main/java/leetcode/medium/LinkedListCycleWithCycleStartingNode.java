@@ -1,4 +1,4 @@
-package leetcode.easy;
+package leetcode.medium;
 
 /**
  * https://leetcode.com/problems/linked-list-cycle-ii/
