@@ -1,5 +1,7 @@
 package leetcode.medium;
 
+import leetcode.ListNode;
+
 /**
  * https://leetcode.com/problems/linked-list-cycle-ii/
  */

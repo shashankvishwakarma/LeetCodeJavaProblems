@@ -1,6 +1,7 @@
 package leetcode.easy;
 
 import dsa.SinglyLinkedList;
+import leetcode.ListNode;
 
 /**
  * https://leetcode.com/problems/merge-two-sorted-lists/description/
@@ -21,7 +22,7 @@ public class MergeTwoSortedLists {
         list3.display();
     }
 
-    /*public ListNode mergeTwoLists(ListNode list1, ListNode list2) {
+    public ListNode mergeTwoLists(ListNode list1, ListNode list2) {
         ListNode dummyHead = new ListNode();
         ListNode tail = dummyHead;
 
@@ -39,7 +40,7 @@ public class MergeTwoSortedLists {
         tail.next = (list1 != null) ? list1 : list2;
 
         return dummyHead.next;
-    }*/
+    }
 
     public static SinglyLinkedList mergeTwoLists(SinglyLinkedList first, SinglyLinkedList second) {
         SinglyLinkedList.Node f = first.head;
