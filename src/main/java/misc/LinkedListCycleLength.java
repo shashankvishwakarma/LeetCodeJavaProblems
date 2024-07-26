@@ -1,5 +1,7 @@
 package misc;
 
+import leetcode.ListNode;
+
 public class LinkedListCycleLength {
     public int lengthCycle(ListNode head) {
         ListNode fast = head;
@@ -20,22 +22,5 @@ public class LinkedListCycleLength {
             }
         }
         return 0;
-    }
-}
-
-class ListNode {
-    int val;
-    ListNode next;
-
-    ListNode() {
-    }
-
-    ListNode(int val) {
-        this.val = val;
-    }
-
-    ListNode(int val, ListNode next) {
-        this.val = val;
-        this.next = next;
     }
 }
