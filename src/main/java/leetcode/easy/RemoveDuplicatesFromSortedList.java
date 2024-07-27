@@ -1,7 +1,7 @@
 package leetcode.easy;
 
+import dsa.ListNode;
 import dsa.SinglyLinkedList;
-import leetcode.ListNode;
 
 /**
  * https://leetcode.com/problems/remove-duplicates-from-sorted-list/

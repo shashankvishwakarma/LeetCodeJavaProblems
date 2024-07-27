@@ -1,6 +1,6 @@
 package leetcode.medium;
 
-import leetcode.ListNode;
+import dsa.ListNode;
 
 /**
  * https://leetcode.com/problems/reverse-linked-list-ii/

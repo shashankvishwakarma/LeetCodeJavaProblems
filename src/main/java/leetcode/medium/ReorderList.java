@@ -1,6 +1,6 @@
 package leetcode.medium;
 
-import leetcode.ListNode;
+import dsa.ListNode;
 
 import static leetcode.easy.MiddleOfTheLinkedList.middleNode;
 import static leetcode.easy.ReverseLinkedList.reverseList;

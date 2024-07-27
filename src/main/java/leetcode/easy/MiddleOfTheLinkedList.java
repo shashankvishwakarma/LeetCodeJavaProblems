@@ -1,6 +1,6 @@
 package leetcode.easy;
 
-import leetcode.ListNode;
+import dsa.ListNode;
 
 /**
  * https://leetcode.com/problems/middle-of-the-linked-list/

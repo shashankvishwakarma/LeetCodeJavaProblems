@@ -1,7 +1,7 @@
 package leetcode.easy;
 
+import dsa.ListNode;
 import dsa.SinglyLinkedList;
-import leetcode.ListNode;
 
 /**
  * https://leetcode.com/problems/merge-two-sorted-lists/description/

@@ -1,6 +1,6 @@
 package geeksforgeeks;
 
-import leetcode.ListNode;
+import dsa.ListNode;
 
 /**
  * https://www.geeksforgeeks.org/reverse-alternate-k-nodes-in-a-singly-linked-list/

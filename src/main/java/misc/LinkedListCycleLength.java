@@ -1,6 +1,6 @@
 package misc;
 
-import leetcode.ListNode;
+import dsa.ListNode;
 
 public class LinkedListCycleLength {
     public int lengthCycle(ListNode head) {

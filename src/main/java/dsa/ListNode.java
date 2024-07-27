@@ -1,4 +1,4 @@
-package leetcode;
+package dsa;
 
 public class ListNode {
     public int val;
