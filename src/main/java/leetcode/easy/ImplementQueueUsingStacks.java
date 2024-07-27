@@ -51,8 +51,8 @@ class ImplementQueueUsingStacks {
     public static void main(String[] args) {
         ImplementQueueUsingStacks obj = new ImplementQueueUsingStacks();
         obj.push(5);
+        System.out.println("Peek element " + obj.peek());
         System.out.println("Pop element " + obj.pop());
-        //System.out.println("Peek element "+obj.peek());
         System.out.println("Is Queue element empty " + obj.empty());
     }
 }
