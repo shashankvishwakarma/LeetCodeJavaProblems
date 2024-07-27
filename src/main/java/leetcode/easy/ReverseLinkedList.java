@@ -6,7 +6,7 @@ import leetcode.ListNode;
  * https://leetcode.com/problems/reverse-linked-list/
  */
 public class ReverseLinkedList {
-    public ListNode reverseList(ListNode head) {
+    public static ListNode reverseList(ListNode head) {
 
         if (head == null) {
             return head;

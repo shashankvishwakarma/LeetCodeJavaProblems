@@ -7,7 +7,7 @@ import leetcode.ListNode;
  */
 public class MiddleOfTheLinkedList {
 
-    public ListNode middleNode(ListNode head) {
+    public static ListNode middleNode(ListNode head) {
         ListNode slow = head;
         ListNode fast = head;
 

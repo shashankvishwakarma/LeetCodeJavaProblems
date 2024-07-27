@@ -1,6 +1,7 @@
 package leetcode.easy;
 
 import dsa.SinglyLinkedList;
+import leetcode.ListNode;
 
 /**
  * https://leetcode.com/problems/remove-duplicates-from-sorted-list/
@@ -20,7 +21,6 @@ public class RemoveDuplicatesFromSortedList {
         singlyLinkedList.display();
     }
 
-    /*
     public ListNode deleteDuplicates(ListNode node) {
         if(node == null) {
             return node;
@@ -36,7 +36,7 @@ public class RemoveDuplicatesFromSortedList {
         }
         return head;
     }
-    */
+
 
     public static SinglyLinkedList.Node deleteDuplicates(SinglyLinkedList.Node node) {
         if (node == null) {
