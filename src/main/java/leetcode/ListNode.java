@@ -55,6 +55,35 @@ public class ListNode {
         return this;
     }
 
+    // Method to find the first node with a specified value
+    public ListNode findElement(int val) {
+        ListNode current = this;
+        while (current != null) {
+            if (current.val == val) {
+                return current;
+            }
+            current = current.next;
+        }
+        return null; // Element not found
+    }
+
+    // Method to delete the first node with a specified value
+    public ListNode deleteElement(int val) {
+        if (this.val == val) {
+            return this.next; // If the head is the element to delete, return the next node as the new head
+        }
+
+        ListNode current = this;
+        while (current.next != null) {
+            if (current.next.val == val) {
+                current.next = current.next.next;
+                return this; // Return the head of the list
+            }
+            current = current.next;
+        }
+        return this; // Element not found, return the head
+    }
+
     // Method to print the list
     public void printList() {
         ListNode current = this;
@@ -81,5 +110,14 @@ public class ListNode {
 
         head = head.insertAtPosition(9, 3);
         head.printList(); // Output: 0 1 2 9 3 4 5
+
+        ListNode found = head.findElement(3);
+        System.out.println(found != null ? found.val : "Element not found"); // Output: 3
+
+        head = head.deleteElement(9);
+        head.printList(); // Output: 0 1 2 3 4 5
+
+        head = head.deleteElement(0);
+        head.printList(); // Output: 1 2 3 4 5
     }
 }
