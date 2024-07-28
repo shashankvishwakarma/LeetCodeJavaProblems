@@ -1,6 +1,6 @@
 package misc;
 
-import dsa.ListNode;
+import dsa.linkedlist.ListNode;
 
 public class LinkedListCycleLength {
     public int lengthCycle(ListNode head) {

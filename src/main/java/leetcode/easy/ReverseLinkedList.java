@@ -1,6 +1,6 @@
 package leetcode.easy;
 
-import dsa.ListNode;
+import dsa.linkedlist.ListNode;
 
 /**
  * https://leetcode.com/problems/reverse-linked-list/

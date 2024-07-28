@@ -1,6 +1,6 @@
 package leetcode.medium;
 
-import dsa.ListNode;
+import dsa.linkedlist.ListNode;
 
 /**
  * https://leetcode.com/problems/sort-list/

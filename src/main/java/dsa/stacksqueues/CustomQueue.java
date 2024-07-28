@@ -1,4 +1,4 @@
-package dsa;
+package dsa.stacksqueues;
 
 import java.util.NoSuchElementException;
 

@@ -1,6 +1,6 @@
 package geeksforgeeks;
 
-import dsa.ListNode;
+import dsa.linkedlist.ListNode;
 
 /**
  * https://www.geeksforgeeks.org/reverse-alternate-k-nodes-in-a-singly-linked-list/

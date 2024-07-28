@@ -1,4 +1,4 @@
-package dsa;
+package dsa.linkedlist;
 
 import java.util.Objects;
 
