@@ -75,9 +75,7 @@ public class CircularLinkedList {
             this.value = value;
         }
     }
-}
 
-class CircularLinkedListClient {
     public static void main(String[] args) {
         CircularLinkedList circularLinkedList = new CircularLinkedList();
         circularLinkedList.insert("1");

@@ -117,9 +117,7 @@ public class SinglyLinkedList {
         while (node != null);
         System.out.println("END");
     }
-}
 
-class SinglyLinkedListClient {
     public static void main(String[] args) {
         SinglyLinkedList singlyLinkedList = new SinglyLinkedList();
         singlyLinkedList.insertFirst(1);
