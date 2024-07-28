@@ -46,16 +46,16 @@ public class BinaryTree {
     }
 
     public void display() {
-        display(this.root, "");
+        display(this.root, "Root Node: ");
     }
 
-    private void display(Node node, String indent) {
+    private void display(Node node, String details) {
         if (node == null) {
             return;
         }
-        System.out.println(indent + node.value);
-        display(node.left, indent + "\t");
-        display(node.right, indent + "\t");
+        System.out.println(details + node.value);
+        display(node.left, "Left child of " + node.value + " : ");
+        display(node.right, "Right child of " + node.value + " : ");
     }
 
     public void prettyDisplay() {
