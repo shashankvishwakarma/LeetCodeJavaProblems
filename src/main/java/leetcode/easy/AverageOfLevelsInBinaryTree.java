@@ -5,6 +5,9 @@ import java.util.LinkedList;
 import java.util.List;
 import java.util.Queue;
 
+/**
+ * https://leetcode.com/problems/average-of-levels-in-binary-tree/
+ */
 public class AverageOfLevelsInBinaryTree {
     public static void main(String[] args) {
         // Example input: root = [3,9,20,null,null,15,7]
