@@ -1,2 +1,4 @@
-package dsa.trees;public class SegmentTree {
+package dsa.trees;
+
+public class SegmentTree {
 }
