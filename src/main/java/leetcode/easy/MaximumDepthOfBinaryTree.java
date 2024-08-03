@@ -1,9 +1,11 @@
 package leetcode.easy;
 
 /**
- * https://leetcode.com/problems/invert-binary-tree/description/
+ * https://leetcode.com/problems/maximum-depth-of-binary-tree/description/
  */
-public class InvertBinaryTree {
+public class MaximumDepthOfBinaryTree {
+
+    static int diameter = 0;
 
     public static void main(String[] args) {
         TreeNode root = new TreeNode(3);
@@ -15,21 +17,18 @@ public class InvertBinaryTree {
         root.right.right = new TreeNode(7);
 
         // Printing the result
-        System.out.println(invertTree(root)); //output 3
+        System.out.println(maxDepth(root)); //output 2
     }
 
-    public static TreeNode invertTree(TreeNode root) {
+    public static int maxDepth(TreeNode root) {
         if (root == null) {
-            return null;
+            return 0;
         }
 
-        TreeNode left = invertTree(root.left);
-        TreeNode right = invertTree(root.right);
+        int leftDepth = maxDepth(root.left);
+        int rightDepth = maxDepth(root.right);
 
-        root.left = right;
-        root.right = left;
-
-        return root;
+        return Math.max(leftDepth, rightDepth) + 1;
     }
 
     static class TreeNode {
