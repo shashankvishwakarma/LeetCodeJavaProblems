@@ -11,7 +11,7 @@ public class ValidateBinarySearchTree {
         root.right.left = new TreeNode(3);
         root.right.right = new TreeNode(6);
 
-        System.out.println(isValidBST(root));
+        System.out.println(isValidBST(root)); //expected false
     }
 
     public static boolean isValidBST(TreeNode root) {
