@@ -10,8 +10,8 @@ public class FirstAndLastOccurrence {
         String str = "tabcdfghijakkk";
         char elementToSearch = 'a';
         findOccurrence(str, 0, elementToSearch);
-        System.out.println("First occurence : " + first); //output 1
-        System.out.println("Last occurence : " + last); //output 10
+        System.out.println("First occurrence : " + first); //output 1
+        System.out.println("Last occurrence : " + last); //output 10
     }
 
     public static void findOccurrence(String str, int index, char elementToSearch) {
