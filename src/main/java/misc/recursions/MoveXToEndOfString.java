@@ -7,7 +7,7 @@ public class MoveXToEndOfString {
         int count = 0;
         String newStr = "";
         newStr = moveAllX(str, 0, count, newStr);
-        System.out.println(newStr);
+        System.out.println(newStr); //abcdefghijkxxxxxx
 
     }
 
