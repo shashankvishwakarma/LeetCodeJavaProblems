@@ -1,4 +1,4 @@
-package misc;
+package misc.recursions;
 
 public class ReverseOfNumber {
     static int sum = 0;

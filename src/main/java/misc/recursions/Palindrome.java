@@ -1,4 +1,4 @@
-package misc;
+package misc.recursions;
 
 public class Palindrome {
     static int sum = 0;

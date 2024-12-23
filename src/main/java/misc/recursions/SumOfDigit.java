@@ -1,4 +1,4 @@
-package misc;
+package misc.recursions;
 
 public class SumOfDigit {
     public static void main(String[] args) {

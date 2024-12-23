@@ -1,4 +1,4 @@
-package misc;
+package dsa.graphs;
 
 import java.util.Stack;
 

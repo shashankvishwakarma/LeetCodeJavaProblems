@@ -1,4 +1,4 @@
-package misc;
+package misc.bitmanipulation;
 
 public class OddEven {
     public static void main(String[] args) {
