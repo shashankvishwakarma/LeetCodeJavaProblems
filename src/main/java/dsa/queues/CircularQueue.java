@@ -1,4 +1,4 @@
-package dsa.stacksqueues;
+package dsa.queues;
 
 public class CircularQueue {
     protected int[] data;

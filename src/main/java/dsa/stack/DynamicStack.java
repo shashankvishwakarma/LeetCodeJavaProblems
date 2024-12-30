@@ -1,4 +1,4 @@
-package dsa.stacksqueues;
+package dsa.stack;
 
 public class DynamicStack extends CustomStack {
 

@@ -1,4 +1,4 @@
-package dsa.stacksqueues;
+package dsa.queues;
 
 public class DynamicQueue extends CircularQueue {
     public DynamicQueue() {
