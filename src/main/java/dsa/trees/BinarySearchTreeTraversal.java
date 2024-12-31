@@ -74,6 +74,39 @@ public class BinarySearchTreeTraversal extends BinaryTree {
         }
     }
 
+    //Height of Tree
+    public static int height(Node root) {
+        if (root == null) {
+            return 0;
+        }
+
+        int leftHeight = height(root.getLeft());
+        int rightHeight = height(root.getRight());
+        return Math.max(leftHeight, rightHeight) + 1;
+    }
+
+    //Count of Nodes of Tree
+    public static int countOfNodes(Node root) {
+        if (root == null) {
+            return 0;
+        }
+
+        int leftNodes = countOfNodes(root.getLeft());
+        int rightNodes = countOfNodes(root.getRight());
+        return leftNodes + rightNodes + 1;
+    }
+
+    //Sum of Nodes of Tree
+    public static int sumOfNodes(Node root) {
+        if (root == null) {
+            return 0;
+        }
+
+        int leftSum = sumOfNodes(root.getLeft());
+        int rightSum = sumOfNodes(root.getRight());
+        return leftSum + rightSum + root.getValue();
+    }
+
 
     public static void main(String[] args) {
         BinarySearchTreeTraversal binarySearchTreeTraversal = new BinarySearchTreeTraversal();
@@ -91,6 +124,10 @@ public class BinarySearchTreeTraversal extends BinaryTree {
         System.out.println(root.getValue());
         binarySearchTreeTraversal.display(root);
         levelOrder(root);
+
+        System.out.println("Height of Tree is " + height(root));
+        System.out.println("Count of Nodes of Tree is " + countOfNodes(root));
+        System.out.println("Sum of Nodes of Tree is " + sumOfNodes(root));
     }
 
     private static void buildTreeAndTraversalApproach1(BinarySearchTreeTraversal binarySearchTreeTraversal) {
