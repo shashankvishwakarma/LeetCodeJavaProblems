@@ -18,7 +18,7 @@ public class BinarySearchTreeTraversal extends BinaryTree {
     }
 
     public void inOrder() {
-        preOrder(getRoot());
+        inOrder(getRoot());
     }
 
     private void inOrder(Node node) {
@@ -31,7 +31,7 @@ public class BinarySearchTreeTraversal extends BinaryTree {
     }
 
     public void postOrder() {
-        preOrder(getRoot());
+        postOrder(getRoot());
     }
 
     private void postOrder(Node node) {
