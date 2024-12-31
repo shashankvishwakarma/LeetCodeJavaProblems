@@ -80,7 +80,7 @@ public class BinaryTree {
 
     public Node buildPreOrderTree(int[] nodes) {
         idx++;
-        if (nodes[idx] == -1) {
+        if (nodes.length <= idx || nodes[idx] == -1) {
             return null;
         }
         Node newNode = new Node(nodes[idx]);
