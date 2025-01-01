@@ -1,66 +1,63 @@
 package leetcode.easy;
 
-import java.util.ArrayList;
-import java.util.HashMap;
+import java.util.Arrays;
+import java.util.HashSet;
+import java.util.Set;
 
 /**
- * https://leetcode.com/problems/intersection-of-two-arrays-ii/description/
- * <p>
+ * https://leetcode.com/problems/intersection-of-two-arrays/description/
+ *
  * Example 1:
  * Input: nums1 = [1,2,2,1], nums2 = [2,2]
- * Output: [2,2]
- * <p>
+ * Output: [2]
+ *
  * Example 2:
  * Input: nums1 = [4,9,5], nums2 = [9,4,9,8,4]
- * Output: [4,9]
+ * Output: [9,4]
+ * Explanation: [4,9] is also accepted.
  */
 public class IntersectionOfTwoArrays {
-
     public static void main(String[] args) {
+
         // Test case 1
         int[] nums1 = {1, 2, 2, 1};
         int[] nums2 = {2, 2};
-        int[] result1 = intersect(nums1, nums2);
+        int[] result1 = intersection(nums1, nums2);
         System.out.print("Intersection of nums1 and nums2: ");
-        for (int num : result1) {
-            System.out.print(num + " ");
-        }
-        System.out.println();
+        System.out.println(Arrays.toString(result1));
 
         // Test case 2
         int[] nums3 = {4, 9, 5};
         int[] nums4 = {9, 4, 9, 8, 4};
-        int[] result2 = intersect(nums3, nums4);
+        int[] result2 = intersection(nums3, nums4);
         System.out.print("Intersection of nums3 and nums4: ");
-        for (int num : result2) {
-            System.out.print(num + " ");
-        }
-        System.out.println();
+        System.out.println(Arrays.toString(result2));
     }
 
-    public static int[] intersect(int[] nums1, int[] nums2) {
-        HashMap<Integer, Integer> map = new HashMap<>();
-        ArrayList<Integer> resultList = new ArrayList<>();
-
-        // Count frequency of each element in nums1
+    public static int[] intersection(int[] nums1, int[] nums2) {
+        // Use a HashSet to store unique elements from nums1
+        Set<Integer> set1 = new HashSet<>();
         for (int num : nums1) {
-            map.put(num, map.getOrDefault(num, 0) + 1);
+            set1.add(num);
         }
 
-        // Find intersection with nums2
+        // Use another HashSet to store the intersection
+        Set<Integer> intersection = new HashSet<>();
         for (int num : nums2) {
-            if (map.containsKey(num) && map.get(num) > 0) {
-                resultList.add(num);
-                map.put(num, map.get(num) - 1); // Decrease the count in the map
+            if (set1.contains(num)) {
+                intersection.add(num);
             }
         }
 
-        // Convert ArrayList to int array
-        int[] result = new int[resultList.size()];
-        for (int i = 0; i < resultList.size(); i++) {
-            result[i] = resultList.get(i);
+        // Convert the intersection set to an array
+        int[] result = new int[intersection.size()];
+        int index = 0;
+        for (int num : intersection) {
+            result[index++] = num;
         }
 
         return result;
     }
+
+
 }
