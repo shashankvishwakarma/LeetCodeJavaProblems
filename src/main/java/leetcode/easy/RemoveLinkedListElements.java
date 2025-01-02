@@ -5,17 +5,11 @@ import dsa.linkedlist.ListNode;
 /**
  * https://leetcode.com/problems/remove-linked-list-elements/
  * <p>
- * Example 1:
- * Input: head = [1,2,6,3,4,5,6], val = 6
- * Output: [1,2,3,4,5]
+ * Example 1: Input: head = [1,2,6,3,4,5,6], val = 6 Output: [1,2,3,4,5]
  * <p>
- * Example 2:
- * Input: head = [], val = 1
- * Output: []
+ * Example 2: Input: head = [], val = 1 Output: []
  * <p>
- * Example 3:
- * Input: head = [7,7,7,7], val = 7
- * Output: []
+ * Example 3: Input: head = [7,7,7,7], val = 7 Output: []
  */
 public class RemoveLinkedListElements {
 
@@ -34,10 +28,18 @@ public class RemoveLinkedListElements {
     }
 
     public static ListNode removeElements(ListNode head, int val) {
-        // Create a dummy node that helps simplify the removal of the head node
-        ListNode dummy = new ListNode(0);
-        dummy.next = head;
-        ListNode currNode = dummy; // Start from the dummy node
+        // Handle the case where the head node(s) need to be removed
+        while (head != null && head.val == val) {
+            head = head.next; // Move the head pointer to the next node
+        }
+
+        // If the list is empty after removing the head nodes
+        if (head == null) {
+            return null;
+        }
+
+        // Start from the current head
+        ListNode currNode = head;
 
         // Traverse the list
         while (currNode.next != null) {
@@ -50,6 +52,6 @@ public class RemoveLinkedListElements {
             }
         }
 
-        return dummy.next; // Return the next of dummy, which is the new head of the list
+        return head; // Return the updated head
     }
 }
