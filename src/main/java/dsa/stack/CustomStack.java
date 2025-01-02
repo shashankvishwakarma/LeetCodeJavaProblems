@@ -1,4 +1,4 @@
-package dsa.stacksqueues;
+package dsa.stack;
 
 import java.util.EmptyStackException;
 

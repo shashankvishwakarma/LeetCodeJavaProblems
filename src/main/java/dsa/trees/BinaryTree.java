@@ -5,6 +5,7 @@ import java.util.Scanner;
 public class BinaryTree {
 
     private Node root;
+    static private int idx = -1;
 
     public static class Node {
         private int value;
@@ -75,6 +76,21 @@ public class BinaryTree {
             node.right = new Node(value);
             populate(scanner, node.right);
         }
+    }
+
+    public Node buildPreOrderTree(int[] nodes) {
+        idx++;
+        if (nodes.length <= idx || nodes[idx] == -1) {
+            return null;
+        }
+        Node newNode = new Node(nodes[idx]);
+        newNode.left = buildPreOrderTree(nodes);
+        newNode.right = buildPreOrderTree(nodes);
+        return newNode;
+    }
+
+    public void display(Node root) {
+        display(root, "Root Node: ");
     }
 
     public void display() {

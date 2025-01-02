@@ -1,12 +1,11 @@
-package misc;
+package misc.recursions;
 
-public class Palindrome {
+public class ReverseOfNumber {
     static int sum = 0;
 
     public static void main(String[] args) {
-        int n = 123321;
-        reverse(n);
-        System.out.println(sum == n);
+        reverse(1342);
+        System.out.println(sum);
     }
 
     static void reverse(int n) {
