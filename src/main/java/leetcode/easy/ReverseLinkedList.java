@@ -25,14 +25,14 @@ public class ReverseLinkedList {
         System.out.print("Reversed List : ");
         reversedHead.printList(); //Output: [5,4,3,2,1]
 
-        head = new ListNode(1);
+        /*head = new ListNode(1);
         head.insertAtEnd(2);
         head.insertAtEnd(3);
         System.out.print("Original List : ");
         head.printList();
         reversedHead = reverseList(head);
         System.out.print("Reversed List : ");
-        reversedHead.printList();//Output: [2,1]
+        reversedHead.printList();//Output: [2,1]*/
     }
 
     public static ListNode reverseList(ListNode head) {
@@ -53,5 +53,25 @@ public class ReverseLinkedList {
             }
         }
         return prev;
+    }
+
+    public static ListNode reverseList1(ListNode head) {
+        if (head == null || head.next == null) {
+            return head;
+        }
+        ListNode prevNode = head;
+        ListNode currNode = head.next;
+
+        while (currNode != null) {
+            ListNode nextNode = currNode.next;
+            currNode.next = prevNode;
+
+            //update
+            prevNode = currNode;
+            currNode = nextNode;
+        }
+        head.next = null;
+        head = prevNode;
+        return head;
     }
 }
