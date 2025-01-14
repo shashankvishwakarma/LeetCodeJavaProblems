@@ -42,7 +42,7 @@ public class IntersectionOfTwoArraysII {
         HashMap<Integer, Integer> map = new HashMap<>();
         ArrayList<Integer> resultList = new ArrayList<>();
 
-        // Count frequency of each element in nums1
+        // Count the frequency of each element in nums1
         for (int num : nums1) {
             map.put(num, map.getOrDefault(num, 0) + 1);
         }
@@ -55,7 +55,7 @@ public class IntersectionOfTwoArraysII {
             }
         }
 
-        // Convert ArrayList to int array
+        // Convert ArrayList to an int array
         int[] result = new int[resultList.size()];
         for (int i = 0; i < resultList.size(); i++) {
             result[i] = resultList.get(i);
