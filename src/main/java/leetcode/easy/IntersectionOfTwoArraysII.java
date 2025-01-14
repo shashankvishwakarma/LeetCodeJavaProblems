@@ -21,7 +21,7 @@ public class IntersectionOfTwoArraysII {
         int[] nums1 = {1, 2, 2, 1};
         int[] nums2 = {2, 2};
         int[] result1 = intersect(nums1, nums2);
-        System.out.print("Intersection of nums1 and nums2: ");
+        System.out.print("Intersection of nums1 and nums2 is: ");
         for (int num : result1) {
             System.out.print(num + " ");
         }
@@ -31,7 +31,7 @@ public class IntersectionOfTwoArraysII {
         int[] nums3 = {4, 9, 5};
         int[] nums4 = {9, 4, 9, 8, 4};
         int[] result2 = intersect(nums3, nums4);
-        System.out.print("Intersection of nums3 and nums4: ");
+        System.out.print("Intersection of nums3 and nums4 is: ");
         for (int num : result2) {
             System.out.print(num + " ");
         }
