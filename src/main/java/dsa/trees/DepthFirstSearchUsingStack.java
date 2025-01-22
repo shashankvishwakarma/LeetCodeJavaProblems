@@ -1,4 +1,4 @@
-package dsa.graphs;
+package dsa.trees;
 
 import java.util.Stack;
 
